@@ -233,6 +233,7 @@
                 Reach out to us from our contact form and we will get back to
                 you shortly.
               </p>
+
               <form method="POST" name="contactform" id="contactform">
                 <div class="form-row">
                   <div class="form-group col-md-6">
@@ -387,26 +388,6 @@
     ></script>
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/theme.js"></script>
-
-    <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbwWpXLpJCiVg-ZejbjHzq004q6beLnIvAauLS9TlRZW_Nwa-LV8HCA4smMDUk3cn2xv/exec";
-      const form = document.forms["contactform"];
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => console.log("Success!", response))
-          .catch((error) => console.error("Error!", error.message));
-      });
-    </script>
-    <script>
-      function submitFunction() {
-        alert("Your Response is Submitted");
-      }
-      function reload() {
-        window.location.reload();
-      }
-    </script>
+    <script src="./assets/js/contactform.js"></script>
   </body>
 </html>
